@@ -1,0 +1,168 @@
+
+/* --------------tablets---------------------- */
+@media (max-width:991px) {
+
+    .header__central {
+        font-size: 80px;
+    }    
+    .project-stroka {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project-foto {
+        width: 100vw;
+        /* height: 50vw; */
+    }
+
+    #first::after {
+        line-height: 50vw;
+    }
+
+    #second::after {
+        line-height: 50vw;
+    }
+
+
+    .header__nav div {
+        font-size: 18px;
+        padding: 0 10px 0 10px;
+    }
+
+
+}
+
+
+
+/* ---------------- mobile--------------------- */
+@media (max-width:768px) {
+    .header__central {
+        font-size: 44px;
+    }
+
+}
+
+
+
+/* если Ширина 767 и меньше выполняется блок стилей */
+@media (max-width: 768px) {
+    .menu__icon {           /* изображение бургера */
+        z-index: 5; /* на предний план навигации */  
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 18px;
+        cursor: pointer;
+        margin-right: 40px;   
+    }
+
+    /* псевдо-элементами получим 3 полоски */
+    .menu__icon span,
+    .menu__icon::before,
+    .menu__icon::after {
+        background-color: #383838;
+        left: 0;
+        position: absolute;
+        height: 10%;
+        width: 100%;
+        transition: all 0.3s ease 0s;
+    }
+
+    .menu__icon::before,    
+    .menu__icon::after {
+        content: ""; /* чтобы просто работали пс-элементы */
+    }
+
+    .menu__icon::after {
+        top: 0;
+    }
+
+    .menu__icon::before {
+        bottom: 0;
+    }
+
+    .menu__icon span {
+        top:50%;
+        transform: scale(1) translate(0px, -50%);
+    }
+    /* --------- */
+
+    /* контейнер со списком */
+    .header__nav {
+        position: fixed;
+        top: 0;     /* позизионируем к верхней границе родителя */
+        left: -100%;    /* убираем за левую границу окна */
+        width: 100%;
+        height: 100%;
+        background-color: hsl(0, 0%, 0%, 0.9);
+        padding: 100px 30px 30px 30px;
+        transition: left 0.3s ease 0s;
+        overflow: auto;                     /* для скроллинга */
+        /* transform: translate(-100%, 0px); */   /* скарываем меню влево за границу окна */
+        z-index: 2;
+        flex-direction: column;
+    }
+
+    .header__nav a {
+        display: block;
+    }
+
+    /* возвращаем из-за левой границы окна */
+    .header__nav._active {      
+        left: 0%;
+    }
+
+    .nav {
+        color: #ffffff;
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .nav_on {
+        color: #808080;
+    }
+
+    .nav:hover {
+        color: #c0c0c0;
+    }
+
+
+     /* анимация бургера при клике */
+     .menu__icon._active span {
+        transform: scale(0) translate(0px, -50%); /* убираем полоску при активном класе _active */
+        background-color: #ffffff;
+    }
+
+    .menu__icon._active::after {
+        top: 50%;
+        transform: rotate(-45deg) translate(0px, -50%);
+        background-color: #ffffff;
+    }
+
+    .menu__icon._active::before {
+        top: 50%;
+        transform: rotate(45deg) translate(0px, 50%);
+        background-color: #ffffff;
+    }
+
+    /* -----обо мне------ */
+    
+    .main_about {
+        flex-direction: column;
+    }
+
+    .main_about_blockLeft {
+        /* background-color: #bcfaa9; */
+        font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+        font-size: 48px;
+    }
+
+    .main_about_blockRight {
+        /* background-color: #5f97ff; */
+        margin-left: 5%;
+        margin-top: 5%;
+        margin: 20% 5% 5% 5%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+    }
+}

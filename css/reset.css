@@ -1,0 +1,62 @@
+body {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+/* свойство box-sizing определяет как вычисляется общая ширина и высота элемента */
+/* box-sizing: border-box; - при таком значении выс и шир блока будет такой, какой ты укажешь в height и width */
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* убираем линии обводки */
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+
+
+/* делаем элементы блочными */
+nav,footer,header{display: block;}
+
+/* уравниваем поведение шрифтов */
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+/* чтобы Элементы наследовали семейство Шрифта */
+input,button,textarea{font-family:inherit;}
+
+/* разное */
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+/* уравниваем все h-ы, чтобы самим управлять их размерами  */
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+
+a:visited,
+a:active, /* для активной/посещенной ссылке */
+a:hover,  /* при наведении */
+a {
+  text-decoration: none;
+  /* display: block;			/* очень важно!!! */ 
+}
+
+ul,
+ol,
+li {
+    list-style: none;   /* удаляем: маркеры + нумерацию */
+}
+
