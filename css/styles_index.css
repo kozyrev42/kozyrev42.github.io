@@ -131,7 +131,7 @@ img {
 }
 
 #first::after {
-    content: 'сайт путешенсвенника';
+    content: 'сайт путешесвенника';
 }
 
 #second::after {
