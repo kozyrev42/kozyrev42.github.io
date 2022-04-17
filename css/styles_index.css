@@ -88,7 +88,7 @@ img {
 }
 
 /* ссылка-изображение */
-.project-foto {
+.box-project-foto {
     position: relative;
     width: 50vw;
     /* height: 25vw; */ /* ВЫСОТА ДОЛЖНА ПРОПОРЦИОНАЛЬНО ВСТАТЬ */
@@ -98,7 +98,7 @@ img {
 }
 
 /* изображение №1 */
-#first::before {
+.project-foto::before {
     position: absolute;
     width: 100%;
     top: 0;
@@ -109,11 +109,11 @@ img {
     opacity: 0.9;
     content:"";
 }
-#first:hover:before{
+.project-foto:hover:before{
     opacity: 0.3;
     transition: all ease-in-out 0.6s;  /* плавная подсветка */
 }
-#first::after {
+.project-foto::after {
     position: absolute;
     width: 100%;
     top: 0;
@@ -121,7 +121,7 @@ img {
     right: 0;
     bottom: 0;
     color: white;
-    content: 'лэндинг для блогера';
+    content: '';
     text-align: center;
     line-height: 25vw; /* центрируем по вертикале */
     
@@ -130,42 +130,34 @@ img {
     font-size: 32px;
 }
 
-/* изображение №2 */
-#second::before {
-    /* затемнение */
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0,0,0);
-    opacity: 0.9;
-    content:"";
+#first::after {
+    content: 'сайт путешенсвенника';
 }
-#second:hover:before{
-    /* подсветка при наведении */
-    opacity: 0.3;
-    transition: all ease-in-out 0.6s;  /* плавная подсветка */
-}
+
 #second::after {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    color: white;
-    content: 'адаптивность';
-    text-align: center;
-    line-height: 25vw;  /* центрируем по вертикале */
-    transition: all ease-in-out 0.3s;       /*  */
-    font-family: 'Roboto',Arial,sans-serif;
-    font-weight: 600;
-    font-size: 32px;
-    
-    
+    content: 'проект #2';
 }
+
+#third::after {
+    content: 'проект #3';
+}
+
+#fourth::after {
+    content: 'проект #4';
+}
+
+#fifth::after {
+    content: 'проект #5';
+}
+
+#sixth::after {
+    content: 'проект на PHP';
+}
+
+
+        
+        
+        
 
 
 
@@ -210,12 +202,6 @@ img {
 .menu__icon {
     display: none;
 }
-
-
-/* ------------------ адаптивность -------------------- */
-
-
-
 
 
 body._lock {
