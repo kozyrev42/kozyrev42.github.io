@@ -131,11 +131,11 @@ img {
 }
 
 #first::after {
-    content: 'сайт путешесвенника';
+    content: 'проект на PHP';
 }
 
 #second::after {
-    content: 'проект #2';
+    content: 'сайт путешесвенника';
 }
 
 #third::after {
@@ -151,7 +151,7 @@ img {
 }
 
 #sixth::after {
-    content: 'проект на PHP';
+    content: 'проект #6';
 }
 
 
