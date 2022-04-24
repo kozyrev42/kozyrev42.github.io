@@ -1,0 +1,217 @@
+
+@media (max-width: 1024px) {
+
+    /* ---------    about-me   ----------- */
+
+    .main-about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-box {
+    
+        width: 80vw;
+        margin: 80px 0 0 0;
+        /* padding-top: 50px; */
+        /* padding-bottom: 50px; */
+        z-index: 1;
+    
+    }
+
+    .image-box {
+        /* background-color: #ca9797; */
+        width: 80vw;
+        height: 53.33vw;
+        margin: 20px 0 0 0;
+        
+    }
+
+
+    /* --------   work  -------- */
+    .work-images {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 768px) {
+    /* изображение бургера */
+    .menu__icon {           
+        z-index: 5; /* на предний план навигации */  
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 18px;
+        cursor: pointer;
+        margin-right: 40px;   
+    }
+
+    /* псевдо-элементами получим 3 полоски */
+    .menu__icon span,
+    .menu__icon::before,
+    .menu__icon::after {
+        background-color: #ffffff;
+        left: 0;
+        position: absolute;
+        height: 10%;
+        width: 100%;
+        transition: all 0.3s ease 0s;
+    }
+
+    .menu__icon::before,    
+    .menu__icon::after {
+        content: ""; /* чтобы просто работали пс-элементы */
+    }
+
+    .menu__icon::after {
+        top: 0;
+    }
+
+    .menu__icon::before {
+        bottom: 0;
+    }
+
+    .menu__icon span {
+        top:50%;
+        transform: scale(1) translate(0px, -50%);
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    /* контейнер со списком */
+    .menu__nav {
+        position: fixed;
+        top: 0;     /* позизионируем к верхней границе родителя */
+        left: -100%;    /* убираем за левую границу окна */
+        width: 100%;
+        height: 100%;
+        background-color: hsl(0, 0%, 0%, 0.9);
+        padding: 100px 0 30px 0;
+        transition: left 0.3s ease 0s;
+        overflow: auto;                     /* для скроллинга */
+        /* transform: translate(-100%, 0px); */   /* скарываем меню влево за границу окна */
+        z-index: 2;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu__nav a {
+        display: block;
+    }
+
+    /* возвращаем из-за левой границы окна */
+    .menu__nav._active {      
+        left: 0%;
+    }
+
+    /* кнопки */
+    .menu-button {
+        color: #ffffff;
+        font-size: 24px;
+        /* margin-bottom: 30px; */
+    }
+
+    .nav_on {                   /* ???????????????????????????? */
+        color: #808080;
+    }
+
+    .menu-button:hover {
+        color: #c0c0c0;
+    }
+
+    .menu-button a {
+        color: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 24px;
+        margin: 25px;
+    }
+
+    .on a {
+        color: #808080;
+        border-bottom:0;  
+        padding: 0;
+    }
+
+     /* анимация бургера при клике */
+     .menu__icon._active span {
+        transform: scale(0) translate(0px, -50%); /* убираем полоску при активном класе _active */
+        background-color: #ffffff;
+    }
+
+    .menu__icon._active::after {
+        top: 50%;
+        transform: rotate(-45deg) translate(0px, -50%);
+        background-color: #ffffff;
+    }
+
+    .menu__icon._active::before {
+        top: 50%;
+        transform: rotate(45deg) translate(0px, 50%);
+        background-color: #ffffff;
+    }
+
+
+    /* основной контент */
+
+    .porfolio-stroka {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .porfolio-foto {
+        width: 100vw;
+        height: 50vw;
+    }
+
+    .porfolio-foto:after { 
+        line-height: 50vw; /* центрируем по вертикале */
+        opacity: 1;
+        font-size: 24px;
+    }
+
+    /* --------   work  -------- */
+    .work-images {
+        grid-template-columns: 1fr;
+    }
+
+    .video {
+        width: 100vw ;
+        height: 56.25vw;
+        
+    } 
+}
+
+@media (max-width: 425px) {
+    /* ---------    about-me   ----------- */
+    .text-box .text-header {
+        font-size: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .text-box-line {
+        margin-left: 20px;
+    }
+
+    .text-box-main {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .text-box-btn {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .text-box-btn a {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+/* ------------------------------------ */
+
