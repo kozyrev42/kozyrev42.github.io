@@ -143,16 +143,16 @@ img {
 }
 
 #fourth::after {
-    content: 'проект #4';
+    content: 'layout website';
 }
 
-#fifth::after {
+/* #fifth::after {
     content: 'проект #5';
 }
 
 #sixth::after {
     content: 'проект #6';
-}
+} */
 
 
         
