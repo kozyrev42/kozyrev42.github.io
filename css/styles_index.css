@@ -139,29 +139,12 @@ img {
 }
 
 #third::after {
-    content: 'проект #3';
+    content: 'responsive website';
 }
 
 #fourth::after {
     content: 'layout website';
 }
-
-/* #fifth::after {
-    content: 'проект #5';
-}
-
-#sixth::after {
-    content: 'проект #6';
-} */
-
-
-        
-        
-        
-
-
-
-
 
 /* ------------------------------------------ */
 
